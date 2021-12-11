@@ -16,7 +16,7 @@ class HeroSection extends Component {
         ></img>
         <article className="flex flex-col items-center p-4">
           <h1 className="m-2 font-play text-darkGray text-center text-4xl lg:text-5xl 2xl:text-7xl">The real beauty is inside of you</h1>
-          <h4 className="m-2 font-open text-darkGray text-center">Click to see our collection</h4>
+          <h4 className="m-2 text-darkGray text-center">Click to see our collection</h4>
           <Button text="SHOP NOW" bgcolor="bg-salmon" />
         </article>
       </section>

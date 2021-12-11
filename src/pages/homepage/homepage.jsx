@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/navbar";
 import HeroSection from "../../components/hero-section/hero-section";
 import CategoriesSection from "../../components/categories-section/categories-section";
 
-class Homepage extends Component {
+class HomePage extends Component {
   constructor() {
     super();
     this.state = {}
@@ -23,4 +23,4 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+export default HomePage;
