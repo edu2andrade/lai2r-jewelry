@@ -12,7 +12,7 @@ class ShopPage extends Component {
   render() {
     const { collections } = this.state;
     return (
-      <div>
+      <div className='mt-24'>
         {
           collections.map(({ id, ...otherCollectionProps }) => ( // spread other props here...
             <CollectionPreview key={id} {...otherCollectionProps} />

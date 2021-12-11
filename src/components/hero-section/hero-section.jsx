@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Button from '../button';
-import bg from './bg-example.jpg';
+import bg from '../../assets/bg-example.jpg';
 
 class HeroSection extends Component {
   constructor() {
@@ -9,9 +9,9 @@ class HeroSection extends Component {
   }
   render() {
     return (
-      <section className="mt-24 xl:flex items-center justify-around">
+      <section className=" xl:flex items-center justify-around">
         <img
-          src={bg} alt="this is the bg"
+          src={bg} alt="beautiful necklace"
           className='w-full h-auto lg:h-72 xl:h-96'
         ></img>
         <article className="flex flex-col items-center p-4">
