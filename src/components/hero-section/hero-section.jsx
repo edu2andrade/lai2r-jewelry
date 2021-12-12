@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from 'react-router-dom';
 import Button from '../button';
 import bg from '../../assets/bg-example.jpg';
 
@@ -17,7 +18,9 @@ class HeroSection extends Component {
         <article className="flex flex-col items-center p-4">
           <h1 className="m-2 font-play text-darkGray text-center text-4xl lg:text-5xl 2xl:text-7xl">The real beauty is inside of you</h1>
           <h4 className="m-2 text-darkGray text-center">Click to see our collection</h4>
-          <Button text="SHOP NOW" bgcolor="bg-salmon" />
+          <Link to='/shop'>
+            <Button text="SHOP NOW" bgcolor="bg-salmon" />
+          </Link>
         </article>
       </section>
     )

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/logo-mini.png';
+import logo from '../../assets/logo-mini.png';
 
 class Header extends Component {
   constructor() {
@@ -17,7 +17,8 @@ class Header extends Component {
       <nav className="p-2 flex justify-between items-center bg-platinum fixed top-2 left-2 right-2 z-10">
 
         <Link to="/">
-          <img src={Logo} alt="lai2r" />
+          {/* <Logo /> */}
+          <img src={logo} alt="lai2r" />
         </Link>
 
         <div className="p-2 flex items-center">
