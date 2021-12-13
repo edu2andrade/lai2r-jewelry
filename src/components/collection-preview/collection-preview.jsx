@@ -1,5 +1,5 @@
 import React from "react";
-import CollectionItem from "./collection-item";
+import CollectionItem from "../collection-item/collection-item";
 
 const CollectionPreview = ({ title, items }) => (
   <div className="flex flex-col mb-8">

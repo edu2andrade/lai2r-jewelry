@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Link } from 'react-router-dom';
-import Button from '../button';
-import bg from '../../assets/bg-example.jpg';
+import Button from '../button/button';
+import bg from '../../assets/images/bg-example.jpg';
 
 class HeroSection extends Component {
   constructor() {
@@ -19,7 +19,7 @@ class HeroSection extends Component {
           <h1 className="m-2 font-play text-darkGray text-center text-4xl lg:text-5xl 2xl:text-7xl">The real beauty is inside of you</h1>
           <h4 className="m-2 text-darkGray text-center">Click to see our collection</h4>
           <Link to='/shop'>
-            <Button text="SHOP NOW" bgcolor="bg-salmon" />
+            <Button text="SHOP NOW" textColor="text-darkGray" bgColor="bg-salmon" />
           </Link>
         </article>
       </section>

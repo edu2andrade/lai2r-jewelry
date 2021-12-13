@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo-mini.png';
+import logo from '../../assets/images/logo-mini.png';
 
 class Header extends Component {
   constructor() {
@@ -22,7 +22,7 @@ class Header extends Component {
         </Link>
 
         <div className="p-2 flex items-center">
-          <Link to="/">
+          <Link to="/signin">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -66,7 +66,7 @@ class Header extends Component {
 
             <div className="w-full h-auto bg-platinum absolute top-20 left-0" style={{ display: (visible ? 'block' : 'none') }}>
               <ul className='m-2 text-center text-eerieBlack'>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/signin">Sign In</Link></li>
                 <li><Link to="/shop">Shop</Link></li>
                 <li><Link to="/collections">Collections</Link></li>
                 <li><Link to="/about">About</Link></li>

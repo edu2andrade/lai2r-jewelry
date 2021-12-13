@@ -1,9 +1,9 @@
 import React from "react";
-import MenuItem from "./menu-item";
-import necklaces from "./images/necklaces.jpg"
-import bracelets from "./images/bracelets.jpg"
-import earrings from "./images/earrings.jpg"
-import rings from "./images/rings.jpg"
+import MenuItem from "../menu-item/menu-item";
+import necklaces from "../../assets/images/necklaces.jpg"
+import bracelets from "../../assets/images/bracelets.jpg"
+import earrings from "../../assets/images/earrings.jpg"
+import rings from "../../assets/images/rings.jpg"
 
 class Directory extends React.Component {
   constructor() {
