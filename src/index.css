@@ -11,5 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #e8e6e2ff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: small;
+  color: #363e3fff;
 }
 

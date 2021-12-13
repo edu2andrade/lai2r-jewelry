@@ -23,11 +23,11 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Already have an account?</h2>
-        <span>Sign in with your email and password:</span>
+      <div className="flex flex-col items-center">
+        <h2 className="py-4 text-2xl">Already have an account?</h2>
+        <span className="mb-8 ">Sign in with your email and password:</span>
 
-        <form onSubmit={this.handleSubmit}>
+        <form className="py-2 flex flex-col" onSubmit={this.handleSubmit}>
 
           <label htmlFor="email">Email</label>
           <FormInput
@@ -38,7 +38,7 @@ class SignIn extends Component {
             required
           />
 
-          <label htmlFor="password">Password</label>
+          <label className="mt-4" htmlFor="password">Password</label>
           <FormInput
             name="password"
             type="password"
@@ -52,7 +52,6 @@ class SignIn extends Component {
             textColor="text-platinum"
             bgColor="bg-darkGray"
             type="submit"
-            value="Submit form"
           />
 
         </form>
