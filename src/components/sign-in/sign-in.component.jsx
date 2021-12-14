@@ -49,8 +49,7 @@ class SignIn extends Component {
 
           <Button
             text="SIGN IN"
-            textColor="text-platinum"
-            bgColor="bg-darkGray"
+            styles="text-platinum bg-darkGray border-darkGray"
             type="submit"
           />
 
