@@ -2,6 +2,8 @@ import { Component } from "react";
 import Button from "../button/button";
 import FormInput from "../form-input/form-input.component";
 
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,7 @@ class SignIn extends Component {
         <h2 className="py-4 text-2xl">Already have an account?</h2>
         <span className="mb-8 ">Sign in with your email and password:</span>
 
-        <form className="py-2 flex flex-col" onSubmit={this.handleSubmit}>
+        <form className="py-2 flex flex-col items-center" onSubmit={this.handleSubmit}>
 
           <label htmlFor="email">Email</label>
           <FormInput
@@ -49,8 +51,14 @@ class SignIn extends Component {
 
           <Button
             text="SIGN IN"
-            styles="text-platinum bg-darkGray border-darkGray"
+            styles="mt-8 text-platinum bg-camel border-camel"
             type="submit"
+          />
+
+          <Button
+            text="SIGN IN WITH GOOGLE"
+            styles="mt-2 text-platinum bg-black border-black"
+            onClick={signInWithGoogle}
           />
 
         </form>

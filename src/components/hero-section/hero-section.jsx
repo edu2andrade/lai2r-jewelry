@@ -21,7 +21,7 @@ class HeroSection extends Component {
           <Link to='/shop'>
             <Button
               text="SHOP NOW"
-              styles="text-darkGray bg-salmon border-salmon"
+              styles="mt-4 text-platinum bg-camel border-camel"
             />
           </Link>
         </article>
