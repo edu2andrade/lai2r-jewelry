@@ -26,8 +26,8 @@ class SignIn extends Component {
   render() {
     return (
       <div className="flex flex-col items-center">
-        <h2 className="py-4 text-2xl">Already have an account?</h2>
-        <span className="mb-8 ">Sign in with your email and password:</span>
+        <h2 className="py-4 text-2xl text-center">Already have an account?</h2>
+        <span className="mb-8">Sign in with your email and password:</span>
 
         <form className="py-2 flex flex-col items-center" onSubmit={this.handleSubmit}>
 

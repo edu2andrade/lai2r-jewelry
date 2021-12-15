@@ -16,7 +16,7 @@ class Header extends React.Component {
 
   render() {
     const { visible } = this.state;
-    const { currentUser } = this.props
+    const { currentUser } = this.props;
 
     return (
       <nav className="p-2 flex justify-between items-center bg-platinum fixed top-0 left-0 right-0 z-10">
