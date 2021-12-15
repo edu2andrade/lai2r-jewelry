@@ -7,7 +7,8 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import Header from './components/header/header';
 import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shoppage';
-import SignInAndRegisterPage from './pages/sign-in-and-register/sign-in-and-register';
+import SignInPage from './pages/sign-in/sign-in-page';
+import RegisterPage from './pages/register/register-page';
 
 class App extends Component {
   constructor() {
@@ -55,7 +56,8 @@ class App extends Component {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="shop" element={<ShopPage />} />
-        <Route path="signin" element={<SignInAndRegisterPage />} />
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="register" element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
     )

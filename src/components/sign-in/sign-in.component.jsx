@@ -3,6 +3,7 @@ import Button from "../button/button";
 import FormInput from "../form-input/form-input.component";
 
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
+import { Link } from "react-router-dom";
 
 class SignIn extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class SignIn extends Component {
     return (
       <div className="flex flex-col items-center">
         <h2 className="py-4 text-2xl text-center">Already have an account?</h2>
-        <span className="mb-8">Sign in with your email and password:</span>
+        <p className="mb-8">Sign in with your email and password:</p>
 
         <form className="py-2 flex flex-col items-center" onSubmit={this.handleSubmit}>
 
@@ -72,6 +73,10 @@ class SignIn extends Component {
           />
 
         </form>
+        <p className="mt-4 text-xs font-bold">Don't have an account yet?</p>
+        <Link to='/register'>
+          <p className="text-xs font-bold underline cursor-pointer">Register</p>
+        </Link>
       </div>
     )
   }
