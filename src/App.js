@@ -1,7 +1,7 @@
 import { Component } from 'react';
 // React Router Dom
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Auth form Firebase
+// Auth from Firebase
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 // Components
 import Header from './components/header/header';
