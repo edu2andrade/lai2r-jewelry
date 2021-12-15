@@ -1,6 +1,6 @@
 import { Component } from 'react';
 // React Router Dom
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 // Auth from Firebase
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 // Redux
@@ -50,8 +50,18 @@ class App extends Component {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="shop" element={<ShopPage />} />
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="register" element={<RegisterPage />} />
+        <Route 
+          path="signin" 
+          element={
+            <SignInWrapper currentUser={this.props.currentUser}>
+              <SignInPage />
+            </SignInWrapper>} />
+        <Route 
+          path="register"
+          element={
+            <SignInWrapper currentUser={this.props.currentUser}>
+              <RegisterPage />
+            </SignInWrapper>} />
       </Routes>
     </BrowserRouter>
     )
@@ -59,8 +69,18 @@ class App extends Component {
   }
 }
 
+// Wrapper component for "Redirect" in React Route DOM v6 use of Navigate
+
+const SignInWrapper = ({ children, currentUser }) => {
+  return currentUser ? <Navigate to="/" replace /> : children;
+};
+
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+})
+
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
