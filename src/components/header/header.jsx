@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-mini.png';
 
 import { auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
 
 
 class Header extends React.Component {
@@ -95,7 +96,11 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header);
 
 
 
