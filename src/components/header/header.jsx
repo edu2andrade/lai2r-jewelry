@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 import { ReactComponent as SignInIcon } from '../../assets/images/signin-icon.svg';
-import { ReactComponent as ShoppingIcon } from '../../assets/images/shopping-icon.svg';
+import CartIcon from '../cart/cart-icon.component';
+import CartDropdown from '../cart/cart-dropdown.component';
 
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
@@ -19,7 +20,7 @@ class Header extends React.Component {
 
   render() {
     const { visible } = this.state;
-    const { currentUser } = this.props;
+    const { currentUser, hidden } = this.props;
 
     return (
       <nav className="p-2 flex justify-between items-center bg-platinum fixed top-0 left-0 right-0 z-10">
@@ -43,9 +44,8 @@ class Header extends React.Component {
             </Link>
           )}
 
-          <Link to="/shop">
-            <ShoppingIcon />
-          </Link>
+          <CartIcon />
+          {hidden ? null : <CartDropdown />}
 
           <div onClick={() => this.setState({ visible: !visible })} className="pl-2 cursor-pointer">
             <svg
@@ -94,8 +94,9 @@ class Header extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({ // Advenced destructuring here :)
+  currentUser,
+  hidden
 })
 
 export default connect(mapStateToProps)(Header);
