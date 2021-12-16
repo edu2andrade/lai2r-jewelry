@@ -9,7 +9,7 @@ class HomePage extends Component {
   }
   render() {
     return (
-      <div className="mt-24 2xl:mx-32">
+      <div className="mt-24">
         <HeroSection />
         <CategoriesSection />
       </div>
