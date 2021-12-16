@@ -3,7 +3,7 @@ import Directory from "./directory";
 
 
 const CategoriesSection = () => (
-  <div className="mt-24">
+  <div className="my-24">
     <Directory />
   </div>
 )

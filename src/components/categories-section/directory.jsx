@@ -35,7 +35,7 @@ class Directory extends React.Component {
   }
   render() {
     return (
-      <div className="flex flex-wrap justify-evenly items-center">
+      <div className="flex flex-wrap justify-center items-center gap-4">
         {
           this.state.categories.map(({ id, title, imageSrc }) => (
             <MenuItem key={id} title={title} imageSrc={imageSrc} />
