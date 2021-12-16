@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo-mini.png';
+import { ReactComponent as Logo } from '../../assets/images/logo.svg';
+import { ReactComponent as SignInIcon } from '../../assets/images/signin-icon.svg';
+import { ReactComponent as ShoppingIcon } from '../../assets/images/shopping-icon.svg';
 
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
@@ -23,7 +25,7 @@ class Header extends React.Component {
       <nav className="p-2 flex justify-between items-center bg-platinum fixed top-0 left-0 right-0 z-10">
 
         <Link to="/">
-          <img src={logo} alt="lai2r" />
+          <Logo className='w-20 lg:w-24' />
         </Link>
 
         <div className="p-2 flex items-center">
@@ -37,16 +39,12 @@ class Header extends React.Component {
             </div>
           ) : (
             <Link to="/signin">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <SignInIcon />
             </Link>
           )}
 
           <Link to="/shop">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-            </svg>
+            <ShoppingIcon />
           </Link>
 
           <div onClick={() => this.setState({ visible: !visible })} className="pl-2 cursor-pointer">
