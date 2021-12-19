@@ -19,7 +19,7 @@ const Header = ({ currentUser, hidden, visible }) => {
         <Logo className='w-20 lg:w-24' />
       </Link>
 
-      <div className="p-2 flex items-center">
+      <div className="p-2 flex items-end">
 
         {currentUser ? (
           <div className='cursor-pointer text-xs pr-2' onClick={() => auth.signOut()}>
@@ -27,7 +27,7 @@ const Header = ({ currentUser, hidden, visible }) => {
           </div>
         ) : (
           <Link to="/signin">
-            <SignInIcon />
+            <SignInIcon className='w-7 h-7' />
           </Link>
         )}
 
