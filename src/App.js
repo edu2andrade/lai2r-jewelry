@@ -6,6 +6,8 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 // Redux
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions'
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from './redux/user/user.selectors';
 // Components
 import Header from './components/header/header';
 import HomePage from './pages/homepage/homepage';
@@ -75,8 +77,9 @@ const SignInWrapper = ({ children, currentUser }) => {
   return currentUser ? <Navigate to="/" replace /> : children;
 };
 
-const mapStateToProps = ({user}) => ({
-  currentUser: user.currentUser
+// createStructredSelector is for the future in case of we need more states
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({

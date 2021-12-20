@@ -4,6 +4,7 @@ import { ReactComponent as ShoppingIcon } from '../../assets/images/shopping-ico
 import { connect } from "react-redux";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
+import { createStructuredSelector } from "reselect";
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => (
   <div
@@ -24,8 +25,9 @@ const mapDispatchToProps = dispatch => ({
 // it won't replace values if they pass a shallow equality check which means 
 // it won't needlessly re-render, but if we have transformation logic it's still valuable 
 // to memoize it with a selector to save us running duplicate logic to get the same output.
-const mapStateToProps = (state) => ({
-  itemCount: selectCartItemsCount(state)
+// createStructredSelector is for the future in case of we need more states
+const mapStateToProps = createStructuredSelector({
+  itemCount: selectCartItemsCount
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

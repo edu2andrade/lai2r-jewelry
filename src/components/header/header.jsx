@@ -9,6 +9,10 @@ import CartDropdown from '../cart/cart-dropdown.component';
 
 import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectHamburguerVisible } from '../../redux/hamburguer/hamburguer.selectors';
 
 
 const Header = ({ currentUser, hidden, visible }) => {
@@ -42,10 +46,10 @@ const Header = ({ currentUser, hidden, visible }) => {
   )
 }
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden }, hamburguer: { visible } }) => ({ // Advanced destructuring here :)
-  currentUser,
-  hidden,
-  visible
+const mapStateToProps = createStructuredSelector({ 
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
+  visible: selectHamburguerVisible,
 })
 
 export default connect(mapStateToProps)(Header);
