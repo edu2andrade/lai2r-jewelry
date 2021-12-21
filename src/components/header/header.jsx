@@ -17,13 +17,13 @@ import { selectHamburguerVisible } from '../../redux/hamburguer/hamburguer.selec
 
 const Header = ({ currentUser, hidden, visible }) => {
   return (
-    <nav className="p-2 flex justify-between items-center bg-platinum fixed top-0 left-0 right-0 z-10">
+    <header className="p-2 flex justify-between items-center bg-platinum fixed top-0 left-0 right-0 z-10">
 
       <Link to="/">
         <Logo className='w-20 lg:w-24' />
       </Link>
 
-      <div className="p-2 flex items-end">
+      <nav className="p-2 flex items-end">
 
         {currentUser ? (
           <div className='cursor-pointer text-xs pr-2' onClick={() => auth.signOut()}>
@@ -41,8 +41,8 @@ const Header = ({ currentUser, hidden, visible }) => {
         <HamburguerMenu />
         {visible ? <HamburguerDropdown /> : null}
 
-      </div>
-    </nav>
+      </nav>
+    </header>
   )
 }
 
