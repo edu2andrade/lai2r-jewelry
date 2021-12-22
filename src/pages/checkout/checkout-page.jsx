@@ -23,8 +23,8 @@ const CheckoutPage = ({cartItems, total}) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
       ))
     }
-    <div>
-      <span>Total: {total}€</span>
+    <div className="w-11/12 flex justify-end">
+      <span className="text-lg font-bold">Total: {total}€</span>
     </div>
   </main>
 )
