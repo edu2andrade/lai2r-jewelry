@@ -28,7 +28,7 @@ const CartDropdown = ({ cartItems, dispatch }) => (
   </div>
 );
 
-// Memoising state with reselect again
+// Memoizing state with reselect again
 // createStructredSelector is for the future in case of we need more states
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems

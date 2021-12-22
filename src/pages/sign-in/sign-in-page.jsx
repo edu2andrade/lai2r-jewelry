@@ -2,9 +2,9 @@ import React from 'react';
 import SignIn from '../../components/sign-in/sign-in.component';
 
 const SignInPage = () => (
-  <div className='mt-24'>
+  <main className='mt-24'>
     <SignIn />
-  </div>
+  </main>
 )
 
 export default SignInPage;
