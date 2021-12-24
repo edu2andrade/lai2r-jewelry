@@ -9,8 +9,8 @@ import MenuItem from "../menu-item/menu-item";
 const Directory = ({ categories }) => (
   <div className="flex flex-wrap justify-center items-center gap-4">
     {
-      categories.map(({ id, title, imageSrc }) => (
-        <MenuItem key={id} title={title} imageSrc={imageSrc} />
+      categories.map(({ id, ...otherCategoriesProps }) => (
+        <MenuItem key={id} {...otherCategoriesProps} />
       ))
     }
   </div>

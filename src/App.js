@@ -52,10 +52,10 @@ class App extends Component {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="shop" element={<ShopPage />} />
-          <Route path="checkout" element={<CheckoutPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/shop" element={<ShopPage />} />
           <Route
-            path="signin"
+            path="/signin"
             element={
               <SignInWrapper currentUser={this.props.currentUser}>
                 <SignInPage />
@@ -63,7 +63,7 @@ class App extends Component {
             }
           />
           <Route
-            path="register"
+            path="/register"
             element={
               <SignInWrapper currentUser={this.props.currentUser}>
                 <RegisterPage />
