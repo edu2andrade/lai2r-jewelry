@@ -1,6 +1,6 @@
 import { Component } from "react";
 // React Router Dom
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 // Auth from Firebase
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 // Redux
@@ -47,41 +47,32 @@ class App extends Component {
   }
 
   render() {
+    const { currentUser } = this.props; // Destructuring
     return (
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/shop" element={<ShopPage />} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route path="/shop" component={ShopPage} />
           <Route
+            exact
             path="/signin"
-            element={
-              <SignInWrapper currentUser={this.props.currentUser}>
-                <SignInPage />
-              </SignInWrapper>
-            }
+            render={() => (currentUser ? <Redirect to="/" /> : <SignInPage />)}
           />
           <Route
+            exact
             path="/register"
-            element={
-              <SignInWrapper currentUser={this.props.currentUser}>
-                <RegisterPage />
-              </SignInWrapper>
+            render={() =>
+              currentUser ? <Redirect to="/" /> : <RegisterPage />
             }
           />
-        </Routes>
+        </Switch>
       </BrowserRouter>
     );
     // Footer
   }
 }
-
-// Wrapper component for "Redirect" in React Route DOM v6 use of Navigate
-
-const SignInWrapper = ({ children, currentUser }) => {
-  return currentUser ? <Navigate to="/" replace /> : children;
-};
 
 // createStructredSelector is for the future in case of we need more states
 const mapStateToProps = createStructuredSelector({
