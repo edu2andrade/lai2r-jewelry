@@ -4,6 +4,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCartItems, selectCartTotal } from "../../redux/cart/cart.selectors";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
+import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
 
 // Reestructure all of this page...
 
@@ -23,9 +24,14 @@ const CheckoutPage = ({cartItems, total}) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
       ))
     }
-    <div className="w-11/12 flex justify-end">
+    <div className="w-11/12 flex justify-end gap-3">
       <span className="text-lg font-bold">Total: {total}€</span>
+      <StripeCheckoutButton price={total} />
     </div>
+
+    <div className="text-red-700 text-center m-5">* Please use the following test credit card for payments: <br/>
+      4242 4242 4242 4242 - Exp: 01/22 - CVV: 123</div>
+    
   </main>
 )
 
