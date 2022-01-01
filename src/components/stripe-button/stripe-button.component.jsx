@@ -16,7 +16,7 @@ const StripeCheckoutButton = ({ price }) => {
       name= "Lai2R Jewelry Store"
       billingAddress
       shippingAddress
-      image='../../assets/images/logo.svg'
+      image='../../assets/images/logo_stripe_btn.png'
       description= {`Your total is ${price}€`}
       amount={priceForStripe}
       panelLabel='Pay Now'
