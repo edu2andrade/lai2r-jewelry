@@ -32,9 +32,13 @@ See the live site here --> [lai2R Jewelry Store](https://lai2r-jewelry.herokuapp
 This project is under --> [MIT License](./LICENSE).
 
 
-## 🦸 Author
+## 👽 Author
 
-Made with ❤️ by Eduardo Andrade
+Made with 💙 by Eduardo Andrade
 
 
-Contact me --> [![Gmail Badge](https://img.shields.io/badge/-edu2andrade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edu2andrade@gmail.com)](mailto:edu2andrade@gmail.com)
+Contact me:
+
+[![Gmail Badge](https://img.shields.io/badge/-edu2andrade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edu2andrade@gmail.com)](mailto:edu2andrade@gmail.com)
+
+[![LinkedIN Badge](https://img.shields.io/badge/edu2andrade-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edu2andrade/)
